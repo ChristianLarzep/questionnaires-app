@@ -1,0 +1,174 @@
+.qe-Item {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    
+    &-actions {
+        display: flex;
+        gap: 0.5rem;
+        flex-shrink: 0;
+        flex-basis: auto;
+        flex-grow: 0;
+        align-items:flex-start;
+        min-inline-size: 0;
+
+        & .qe-Button {
+            margin-right: 1rem;
+        }
+    }
+
+    &-add {
+        flex-basis: 100%;
+        position: absolute;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        inset-block-end: -0.9rem;
+        inset-inline-start: 50%;
+        transform: translate(-50%, 50%);
+        z-index: 2; 
+
+        &Last {
+            inset-block-end: -1.7rem;
+        }
+
+        &Icon {
+            grid-area: 1/1/1/1;
+            pointer-events: none;
+            will-change: opacity;
+            transition: opacity 0.1s ease;
+            justify-self: center;
+            opacity: 0.6;
+        }
+
+        &Actions {
+            grid-area: 1/1/1/1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0;
+            will-change: opacity;
+            transition: opacity 0.1s ease;
+            border-radius: 0.25rem;
+        }
+        
+        &:hover &Actions {
+            opacity: 1;
+        }
+        
+        &:hover &Icon {
+            opacity: 0;
+        }
+    }
+
+    &-details {
+        display: flex;
+        gap: 1rem;
+        margin-block-start: 0.5rem;
+    }
+    
+    &Details {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        &-field {
+            margin-bottom: 15px;
+        }
+
+        &-label  {
+            position: absolute;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+        }
+    }
+
+    &-sortable {
+        & .qe-Button {
+            cursor: grab;
+            padding-inline-start: 0.625rem;
+            padding-inline-end: 0.625rem;
+
+            &:hover { 
+                background-color: #fbf9f8;
+            }
+        }
+    }
+
+    &Options {
+        display: flex;
+        flex-direction: column;
+        margin-inline-end: 5em;
+
+        &-heading {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            white-space: nowrap;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+        }
+
+        &-list {
+            list-style: none;
+        }
+    }
+
+    &-selectType {
+        &-container {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        &-label  {
+            position: absolute;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+        }
+
+        &-select {
+            display: grid;
+            grid-template-areas: "select";
+            align-items: center;
+            position: relative;
+            min-width: 15ch;
+            border: 1px solid #777;
+            border-radius: 0.25em;
+            padding: 0.25em 0.5em;
+            font-size: 1.25rem;
+            cursor: pointer;
+            line-height: 1.1;
+            background-color: #fff;
+            background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+            width: 100%;
+
+            &::after, select {
+                grid-area: select;
+            }
+
+            & select {
+                appearance: none;
+                background-color: transparent;
+                border: none;
+                padding: 0 1em 0 0;
+                margin: 0;
+                width: 104%;
+                font-family: inherit;
+                font-size: inherit;
+                cursor: inherit;
+                line-height: inherit;
+                z-index: 3;
+                outline: none;
+            }
+        }
+
+    }
+}

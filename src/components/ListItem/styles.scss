@@ -1,0 +1,62 @@
+.list-item {
+    display: flex;
+    padding: 27px;
+
+    &:hover {
+        background-color: #f5f4f2;
+        cursor: pointer;
+    }
+
+    &Body {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    &Badge {
+        display: flex;
+        align-items: center;
+        width: 90px;
+
+        & span { 
+            padding: 2px 9px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        &--published {
+            color: #436b1d;
+            background-color: #ceebb2;
+        }
+
+        &--draft {
+            color: #665f5a;
+            background-color: #e3e1dc;
+        }
+    }
+
+    &Details {
+        display: flex;
+        flex-grow: 1;
+        
+    }
+
+    &Content {
+        width: 60%;
+    }
+
+    &-primaryText a {
+        text-decoration: none;
+        color:#00678c;
+    }
+
+    &-secondaryText {
+        font-size: 14px;
+        color:#5b5b59;
+    }
+
+    &-meta b {
+        margin-right: 5px;
+    }
+}

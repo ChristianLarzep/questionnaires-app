@@ -1,0 +1,26 @@
+.qe-NavBar {
+  display: flex;
+
+  &-title {
+    height: 40px;
+    padding: 9px 0 9px 0;
+    margin-right: auto;
+  }
+
+  .qe-Button-text {
+    margin-right: 50px;
+
+    &:hover {
+      background-color: #169e6d !important;
+    }
+  }
+}
+
+.qe-Sections {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    padding: 40px;
+    margin-top: 60px;
+}

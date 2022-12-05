@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #fbf9f8;
+}
+
+.ui-state-highlight {
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  border-radius:  0.5rem;
+  border-width: 1px;
+  border-style: dashed;
+  margin-bottom: 15px;
+  background-color: #fbf9f8;
+}

@@ -1,0 +1,93 @@
+.qe-Section {
+    border: 2px solid #e3e2e1;
+    border-radius: 5px;
+    width: 65%;
+    margin-bottom: 28px;
+    padding-block-start: 10px;
+    padding-block-end: 10px;
+    padding-inline-start: 14px;
+    padding-inline-end: 20px;
+
+    &-itemsList {
+        display: flex;
+        flex-direction: column;
+        margin-inline-end: 5em;
+
+        & > .qe-Item:not(.qe-Item:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &-header {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Roboto', sans-serif;
+        color: #5a5957;
+        align-items: center;
+    }
+
+    &-heading {
+        flex-grow: 3;
+    }
+
+    &-add {
+        display: grid;
+        align-items: center;
+    }
+
+    &-addIcon {
+        grid-area: 1/1/1/1;
+        justify-self: end;
+        opacity: 1;
+        will-change: opacity;
+        transition: opacity 0.1s ease;
+    }
+
+    &-add:hover &-addActions {
+        opacity: 1;
+    }
+
+    &-add:hover &-addIcon {
+        opacity: 0;
+    }
+
+    &-addActions {
+        display: flex;
+        grid-area: 1/1/1/1;
+        gap: 0.5rem;
+        opacity: 0;
+        will-change: opacity;
+        transition: opacity 0.1s ease;
+        justify-self: end;
+    }
+
+    &-details {
+        display: flex;
+        gap: 1rem;
+        margin-block-start: 0.5rem;
+    }
+
+    &Details {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    &-actions {
+        display: flex;
+        gap: 0.5rem;
+        flex-shrink: 0;
+        flex-basis: auto;
+        flex-grow: 0;
+        align-items:flex-start;
+        min-inline-size: 0;
+
+        & .qe-Button {
+            margin-right: 1rem;
+        }
+    }
+
+    &--Prolog &-itemsList, &--Epilog &-itemsList {
+        padding-top: 9px;
+    }
+}
