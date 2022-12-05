@@ -1,5 +1,6 @@
 import { useContext, useEffect } from 'react';
-import ListItem from '../../components/ListItem/ListItem';
+
+import { ListItem } from '../../components';
 import { Context } from './../../context/context';
 import { getQuestionnairesData } from './../../services/fakeQuestionnairesService';
 

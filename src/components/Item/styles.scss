@@ -13,7 +13,7 @@
         align-items:flex-start;
         min-inline-size: 0;
 
-        & .qe-Button {
+        .qe-Button {
             margin-right: 1rem;
         }
     }
@@ -88,7 +88,7 @@
     }
 
     &-sortable {
-        & .qe-Button {
+        .qe-Button {
             cursor: grab;
             padding-inline-start: 0.625rem;
             padding-inline-end: 0.625rem;
@@ -154,7 +154,7 @@
                 grid-area: select;
             }
 
-            & select {
+            select {
                 appearance: none;
                 background-color: transparent;
                 border: none;
@@ -169,6 +169,5 @@
                 outline: none;
             }
         }
-
     }
 }

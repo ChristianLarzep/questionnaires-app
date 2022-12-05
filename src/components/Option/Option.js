@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import { Button, TextField } from "./../index";
+import { Button, TextField } from './../index';
 
-import "./styles.scss";
+import './styles.scss';
 
 export default function Option( { 
     type, 

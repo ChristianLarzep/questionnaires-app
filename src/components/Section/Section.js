@@ -1,16 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import Button from '../Button/Button';
-import Dropdown from "../Dropdown";
-import Item from '../Item/Item';
-import Modal from '../Modal';
-import TextField from '../TextField/TextField';
 
-import $ from "jquery";
-import "jquery-ui-dist/jquery-ui";
-
+import { Button, Dropdown, Item, Modal, TextField } from './..';
 import { getItemTypeTemplate } from './../../services/fakeItemsTemplatesService';
 
-import "./styles.scss";
+import $ from 'jquery';
+import 'jquery-ui-dist/jquery-ui';
+
+import './styles.scss';
 
 export default function Section( { 
     questionnaireId,

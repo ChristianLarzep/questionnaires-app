@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Button, NavBar } from '../../components';
-import Section from '../../components/Section/Section';
+
 import { actions } from '../../context/actions';
 import { Context } from '../../context/context';
+import { Button, NavBar, Section } from '../../components';
 
-import "./styles.scss";
+import './styles.scss';
 
 export default function Editor() {
     

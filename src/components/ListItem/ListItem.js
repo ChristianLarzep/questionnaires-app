@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { actions } from '../../context/actions';
-import Dropdown from '../Dropdown';
 
-import "./styles.scss";
+import Dropdown from '../Dropdown';
+import { actions } from '../../context/actions';
+
+import './styles.scss';
 
 export default function ListItem( { item, dispatch } ) {
     const blockName = "list-item";

@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import $ from "jquery";
+import { Button } from './..';
 
-import "./styles.scss";
-import Button from '../Button';
+import $ from 'jquery';
+
+import './styles.scss';
 
 export default function Dropdown( { id, hover, actions } ) {
     const blockName = "qe-dropdown";
