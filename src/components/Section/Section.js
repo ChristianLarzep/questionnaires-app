@@ -160,17 +160,17 @@ export default function Section( {
                 <div className={`${blockName}-addActions`}>
                 {
                     allowQuestions ? 
-                      <Button text="Add Question" onClick={ () => addNewItem( SELECT_LIST ) }/>
+                      <Button label="Add Question" onClick={ () => addNewItem( SELECT_LIST ) }/>
                     : null
                 }
                 {
                     allowBoilerplates ? 
-                      <Button text="Add Boilerplate" onClick={ () => addNewItem( DISPLAY_TEXT ) } />
+                      <Button label="Add Boilerplate" onClick={ () => addNewItem( DISPLAY_TEXT ) } />
                     : null
                 }
                 {
                     sectionName === "Page" ?
-                      <Button text="Add Page" onClick={ () => addNewItem( PAGE, sectionNum - 1 ) } />
+                      <Button label="Add Page" onClick={ () => addNewItem( PAGE, sectionNum - 1 ) } />
                     : null
                 }
                 </div>
@@ -196,7 +196,7 @@ export default function Section( {
                 </div>
 
                 <div className={`${blockName}-actions`}>
-                  <Button icon="fa fa-pencil" text="Edit Page" onClick={ () => setOpenEditModal( true ) } />
+                  <Button type="icon" iconClass="fa fa-pencil" label="Edit Page" onClick={ () => setOpenEditModal( true ) } />
                   <Dropdown 
                     id={`s_${sectionNum}-actionsMenu`}
                     actions={ [

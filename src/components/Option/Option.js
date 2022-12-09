@@ -66,14 +66,14 @@ export default function Option( {
         {
           isSortable ? 
             <div className={`${blockName}-sortable`}>
-              <Button icon="fa fa-bars" text="Drag Option" />
+              <Button type="icon" iconClass="fa fa-bars" label="Drag Option" />
             </div>
           : null
         }  
         {
           icon ? 
             <div className={`${blockName}-visual`}>
-              <Button icon={icon} text="" />
+              <Button type="icon" iconClass={icon} label="Option visual" />
             </div>
           : null
         }        
@@ -97,7 +97,7 @@ export default function Option( {
         {
           isSortable ? 
             <div className={`${blockName}-actions`}>
-              <Button icon="fa fa-trash-o" text="Delete Option" disabled={disableDelete} onClick={ () => { if ( !disableDelete ) { deleteOption( data.id ); } } }/>
+              <Button type="icon" iconClass="fa fa-trash-o" label="Delete Option" disabled={disableDelete} onClick={ () => { if ( !disableDelete ) { deleteOption( data.id ); } } }/>
             </div>
           : null
         }

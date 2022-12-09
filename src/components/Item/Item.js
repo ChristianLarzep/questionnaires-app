@@ -204,7 +204,7 @@ export default function Item( {
       <div className={blockName} id={data.id}>
         <div className={`${blockName}-details`}>
           <div className={`${blockName}-sortable`}>
-            <Button icon="fa fa-bars" text="Drag Item" />
+            <Button type="icon" iconClass="fa fa-bars" label="Drag Item" />
           </div>
 
           <div className={`${blockName}Details`}>
@@ -224,7 +224,11 @@ export default function Item( {
           </div>
 
           <div className={`${blockName}-actions`}>
-            <Button icon="fa fa-pencil" text="Edit Item" onClick={ () => setOpenEditModal( true ) }/>
+            <Button type="iconText" iconClass={data.icon} label={data.type.toLowerCase().replace( '_', ' ' )} style={{ marginRight: 0 }} onClick={ () => setOpenTypesModal( true ) }/>
+          </div>
+
+          <div className={`${blockName}-actions`}>
+            <Button type="icon" iconClass="fa fa-pencil" label="Edit Item" onClick={ () => setOpenEditModal( true ) }/>
             <Dropdown
               id={`dropdown_s_${sectionNum}_q_${questionNum}`} 
               actions={ getActions() } 
@@ -275,11 +279,11 @@ export default function Item( {
           </span>
           <div className={`${blockName}-addActions`}>
             { 
-              sectionName === PAGE ? <Button text="Add Question" onClick={ () => addNewItem( "SELECT_LIST", questionNum ) } />: null
+              sectionName === PAGE ? <Button label="Add Question" onClick={ () => addNewItem( "SELECT_LIST", questionNum ) } />: null
             }
-            <Button text="Add Boilerplate" onClick={ () => addNewItem( "DISPLAY_TEXT", questionNum ) } />
+            <Button label="Add Boilerplate" onClick={ () => addNewItem( "DISPLAY_TEXT", questionNum ) } />
             { 
-              sectionName === PAGE && isLast ? <Button text="Add Page" onClick={ () => addNewItem( "PAGE", sectionNum - 1 ) }/>: null
+              sectionName === PAGE && isLast ? <Button label="Add Page" onClick={ () => addNewItem( "PAGE", sectionNum - 1 ) }/>: null
             }
           </div>
         </div>

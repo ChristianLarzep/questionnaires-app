@@ -84,7 +84,7 @@ export default function Editor() {
         <NavBar>
           <div className='qe-NavBar'>
             <div className='qe-NavBar-title'>{title}</div>
-            <Button style={{boxShadow: 'none', backgroundColor: '#03aa6d', color: 'white' }}  type="text" text="Save" onClick={ () => { saveChanges(); } }/>
+            <Button style={{boxShadow: 'none', backgroundColor: '#03aa6d', color: 'white' }}  type="text" label="Save" onClick={ () => { saveChanges(); } }/>
           </div>
         </NavBar>
         <div className="qe-Sections">

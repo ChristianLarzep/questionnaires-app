@@ -70,8 +70,9 @@ export default function Dropdown( { id, hover, actions } ) {
         <div id={id} className={`${blockName} ${ ( hover ? "hover-btn" : "" ) }`}>
           <Button 
             id={`${id}-menu-btn`}
-            icon="fa fa-ellipsis-h"
-            text="Actions"
+            type="icon"
+            iconClass="fa fa-ellipsis-h"
+            label="Actions"
             aria-haspopup="true"
             aria-controls={`${id}-menu`}
             onClick={openDropdown}

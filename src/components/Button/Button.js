@@ -4,33 +4,38 @@ import "./styles.scss";
 
 export default function Button( props ) {
 
-  const {  icon, text, disabled = false, onClick, ...extraProps } = props;
+  const { type = "text", iconClass, label, disabled = false, onClick, ...extraProps } = props;
 
-  const blockName = "qe-Button";
+  const blockName = "qe-Button",
+      isIconType = type === 'icon';
 
   const getBody = function() {
       return (
-        <span className={`${blockName}-label`}>
-          <span className= {`${blockName}-icon ${icon}`} aria-hidden="true"></span>
-          <span className={`${blockName}-text`}>{text}</span>
+        <span className={`${blockName}-label`}> 
+          <span className= {`${blockName}-icon ${iconClass}`} aria-hidden="true"></span>
+          <span className={`${blockName + ( type === 'icon' ? '-labelText-hidden' : '-labelText-visible' ) }`}>{label}</span>
         </span>
       );
+  };
+
+  const getIconBtnClasses = function() {
+      return blockName + ' ' + ( isIconType ? blockName + '--Icon' : blockName + '--IconText' );
   };
 
   return (
     <>
       {
-        icon ? 
+        isIconType || type === "iconText" ? 
           onClick ? 
-            <button {...extraProps} onClick={onClick} className={`${blockName}`} type="button" title={text} disabled={disabled}>
+            <button {...extraProps} onClick={onClick} className={getIconBtnClasses()} type="button" title={label} disabled={disabled}>
               { getBody() }
             </button>
           :           
-            <span {...extraProps} className={`${blockName}`}>
+            <span {...extraProps} className={getIconBtnClasses()}>
               { getBody() }
             </span>
         : <button {...extraProps} onClick={onClick} className={`${blockName}-text`} disabled={disabled}>
-            {text}
+            {label}
           </button>
       }
     </>

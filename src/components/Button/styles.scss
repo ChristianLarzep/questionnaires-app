@@ -1,73 +1,86 @@
 .qe-Button {
-    flex-grow: 0;
-    vertical-align: middle;
-    display: inline-flex;
+  flex-grow: 0;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  appearance: none;
+  text-decoration: none !important;
+  font-family: inherit;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  touch-action: manipulation;
+  padding-block-start: 0.625rem;
+  padding-block-end: 0.625rem;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  border-width: 0;
+  border-style: solid;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-shadow: none;
+  background-color: transparent;
+  color: inherit;
+  box-shadow: none;
+  outline-offset: 2px;
+  outline-color: currentColor;
+
+  .qe-Button-labelText-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    inline-size: 1px;
+    block-size: 1px;
+    margin: -1px;
+  }
+
+  .qe-Button-labelText-visible {
+    margin-left: 9px;
+  }
+
+  &--IconText {
+    padding: 10px 15px;
+    background-color: #f1efed;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  &-icon {
+    display: block;
+    font-size: 1.2rem;
+  }
+
+  &-label {
+    display: flex;
     align-items: center;
     justify-content: center;
-    appearance: none;
-    text-decoration: none !important;
-    font-family: inherit;
-    margin: 0;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    touch-action: manipulation;
-    padding-block-start: 0.625rem;
-    padding-block-end: 0.625rem;
-    padding-inline-start: 0;
-    padding-inline-end: 0;
-    border-width: 0;
-    border-style: solid;
+  }
+
+  &-text {
+    padding: 10px 15px;
+    background-color: #f1efed;
+    border: none;
     border-radius: 0.25rem;
-    cursor: pointer;
-    font-size: 0.875rem;
-    font-weight: 400;
-    text-shadow: none;
-    background-color: transparent;
-    color: inherit;
-    box-shadow: none;
-    outline-offset: 2px;
-    outline-color: currentColor;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.19);
 
-    .qe-Button-text {
-        position: absolute;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        white-space: nowrap;
-        inline-size: 1px;
-        block-size: 1px;
-        margin: -1px;
-    }
-
-    &-icon {
-        display: block;
-        font-size: 1.2rem;
-    }
-
-    &-label {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &-text {
-        padding: 10px 15px;
-        background-color: #f1efed;
-        border: none;
-        border-radius: 0.25rem;
-        font-weight: bold;
-        font-size: 14px;
-        box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.19);
-
-        &:hover {
-            cursor: pointer;
-            background-color: #e8e7e7;
-        }
+    &:hover {
+      cursor: pointer;
+      background-color: #e8e7e7;
     }
   }
+}
 
-  button[disabled]{
+button[disabled]{
     color: #aeadad;
-  }
+}
